@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap"
+    />
+  </head>
+  <body>
+    <section class="audi-2nd">
+      <section class="frame-parent">
+        <div class="lean-staffing-and-manual-follo-parent">
+          <div class="lean-staffing-and" data-animate-on-scroll>
+            Lean Staffing and Manual Follow-Up Create Lost Opportunities in a
+            Tight Market
+          </div>
+          <div class="concerned-about-an-container" data-animate-on-scroll>
+            <p class="concerned-about-an">
+               The Sales team at Bob Rohrman Kia had no shortage of opportunities Leads were coming in from multiple channels at all times of the day and
+               night, with more than 45% originating during off-hours.
+               
+               With rapidly growing lead volume, the sales team was stretched to its limit. Responding to every inbound inquiry while trying to nurture customer
+               relationships was becoming increasingly difficult, Too much time was being spent answering basic questions and chasing unresponsive leads,
+               preventing sales reps from focusing on closing deals.
+            </p>
+            <p class="concerned-about-an"></p>
+            <p class="concerned-about-an">
+               Employee frustra tion was growi ng, but what could be done wi thout adding additional headcount?
+            </p>
+          </div>
+        </div>
+        <div
+          class="we-were-already-seeing-early-s-parent"
+          data-animate-on-scroll
+        >
+          <div class="we-were-already" data-animate-on-scroll>
+            “We would have our best salespeople spend hours everyday chasing down
+            questions that came in overnight, only for the sale to go nowhere. I cant begin
+            to estimate the number of hours or revenue lost”
+          </div>
+          <div class="stephen-powers-vice" data-animate-on-scroll>
+            Allen Gooch General Manager Bob Rohrman KB
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
